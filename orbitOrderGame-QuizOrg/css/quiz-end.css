@@ -1,0 +1,199 @@
+/* Global box-sizing rule */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "play", sans-serif;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background: #f1f9ff url('../images/main-backgrd-Img.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Kirang Haerang', cursive;
+    color: #FFDD00;
+    font-size: 2.5em;
+
+}
+
+header>h2 {
+    color: #f9f8f8;
+    font-size: 1.5em;
+
+
+}
+
+
+#results-container {
+    margin: 50px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    background: #07134b;
+    box-shadow: 0px 0px 10px #000;
+    border-radius: 10px;
+    border: 1px white solid;
+}
+
+#nova-image {
+    width: 180px;
+    height: auto;
+    margin: 20px auto;
+    animation: bounce 2s infinite ease-in-out;
+
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 1.9rem;
+    color: #f1e20d;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #f0f0ee;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    cursor: url('../images/rocket-mouse.png'), auto;
+    width: 180px;
+    text-align: center;
+}
+
+button:focus {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+#play-quiz-again {
+    background-color: #FF9800;
+
+}
+
+#return-home {
+    background-color: #00CE70;
+}
+
+
+#play-quiz-again:hover {
+    background-color: #3498db;
+    transform: scale(1.05);
+}
+
+#return-home:hover {
+    background-color: #F24998;
+    transform: scale(1.05);
+}
+
+
+#space-trophy {
+    width: 120px;
+    margin: 20px auto;
+    display: block;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+/* Bouncing animation for Nova */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+.hidden {
+    display: none !important;
+    /* Force the hidden rule to override any conflicting styles */
+}
+
+
+
+/* Media Query for Screens Larger than 1900px */
+@media (min-width: 1900px) {
+
+
+    h1 {
+        font-size: 3em;
+    }
+
+    header>h2 {
+        font-size: 1.8em;
+    }
+
+    #results-container {
+        max-width: 1000px;
+        max-height: 800px;
+        padding: 30px;
+        box-shadow: 0px 0px 15px #fff;
+    }
+
+    #nova-image {
+        width: 220px;
+        animation: bounce 1.5s infinite ease-in-out;
+    }
+
+    #space-trophy {
+        width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #results-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #nova-image {
+        width: 140px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        width: 150px;
+        padding: 10px 15px;
+    }
+}

@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background: #f1f9ff url('../images/main-backgrd-Img.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Play', sans-serif;
+}
+
+h1 {
+
+    font-family: "Kirang Haerang", cursive;
+    margin-top: 3%;
+    font-size: 40px;
+    color: #FFDD00;
+
+
+}
+
+#nova-image {
+    width: 140px;
+    height: auto;
+    margin-top: 20px;
+    animation: bounce 2s infinite ease-in-out;
+    /* Add bounce animation to Nova */
+}
+
+#nova-image {
+    will-change: transform;
+}
+
+
+/* Glowing text effect */
+#successful-msg {
+    background-color: rgba(0, 206, 112, 0.8);
+    /* Green with 80% opacity */
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    width: 600px;
+    max-width: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out, glow 2s infinite alternate;
+}
+
+#unsuccessful-msg {
+    background-color: rgba(243, 25, 25, 0.764);
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    width: 600px;
+    max-width: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out, glow 2s infinite alternate;
+    color: white;
+    display: none;
+}
+
+#timeLeft {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffeb3b;
+}
+
+/* Shared button styles */
+button.common-button {
+    background-color: #FF9800;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    width: 180px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    margin: 30px 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: url('../images/rocket-mouse.png'), auto;
+}
+
+/* Hover effect for all buttons */
+#take-quiz:hover {
+    background-color: #00CE70;
+    transform: scale(1.1);
+}
+
+#try-again-button:hover {
+    background-color: #3498db;
+    transform: scale(1.1);
+}
+
+
+
+/* Specific background color override for quizbutton */
+button#take-quiz {
+    background-color: #F24998;
+}
+
+
+button.common-button:focus {
+    outline: 2px solid #FF9800;
+    outline-offset: 4px;
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(255, 152, 0, 0.5);
+}
+
+/* Bouncing animation for Nova */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+
+@media (min-width: 1900px) {
+    h1 {
+
+        font-size: 60px;
+        margin-top: -40%;
+
+    }
+    #nova-image {
+        width: 300px;
+        height: auto;
+
+    }
+
+    #successful-msg {  
+        width: 850px;
+        max-width: 1200px;
+        font-size: 30px;        
+        
+    }
+    
+    #unsuccessful-msg {
+        width: 850px;
+        max-width: 1200px;
+        font-size: 30px; 
+        
+    }
+
+    
+   
+
+}
+
+@media (max-width: 600px) {
+  
+
+    h1 {
+        font-size: 30px; 
+        margin-top: 5px; 
+    }
+
+    #nova-image {
+        width: 80px; 
+        margin-top: 5px; 
+        animation: bounce 2s infinite ease-in-out; 
+    }
+
+    #successful-msg,
+    #unsuccessful-msg {
+        font-size: 14px; 
+        padding: 8px; 
+        width: 300px;
+        margin: 10px auto; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    }
+
+    #unsuccessful-msg {
+        width: 300px; 
+    }  
+
+    
+}

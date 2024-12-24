@@ -1,0 +1,313 @@
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {    
+    font-family: 'Play', sans-serif;
+    background-color: #050505;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    border-radius: 1%;
+    margin: 0;
+    padding: 0;
+}
+
+
+#game-page {
+    position: relative;
+    
+}
+
+
+#game-textbox {
+    position: absolute;
+    top: 12%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0c093e;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(247, 247, 245, 0.54);
+    text-align: center;  
+    
+}
+
+#game-textbox p {
+    width: 100%;
+    font-size: clamp(12px, 2vw, 14px);  
+    color: #f2f2f2;
+    margin-top: 0;   
+    
+}
+
+
+#timer {
+    font-size: clamp(18px, 4vw, 20px);
+    font-weight: bold;
+    margin-top: 5px;
+    color: #ff0000;
+}
+
+
+#solar-system-container {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#solarImage {
+    width: 78.5%; 
+    max-width: 90%; 
+    max-height: 580px;
+    position: relative;
+    margin: 5px auto; 
+    top: 0;
+    border: #f2f2f2 solid 1px;
+}
+
+#orbit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+.drop-zone {
+    position: absolute;
+    width: 7%;
+    height: 15.8%;   
+    border: 3px dashed rgba(252, 252, 252, 0.97);
+    background-color: rgba(236, 239, 236, 0.5);
+    transform: translate(-50%, -50%);
+}
+
+.planet {
+      
+    position: relative;
+      
+}
+
+/* General styling for planet containers */
+.planet-container {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around; 
+    align-items: center; 
+    height: 80%; 
+    
+}
+
+/* Left side planets */
+#left-planet-container {
+    left: 20px; 
+    margin-left: -5px;
+    
+}
+
+/* Right side planets */
+#right-planet-container {
+    right: 20px; 
+    margin-right: -5px;
+    
+    
+}
+
+/* Style the planets */
+.planet img {
+    width: 110px; 
+    height: auto;
+    border-radius: 50%;
+    cursor: grab; 
+}
+
+/* Optional: Add hover effect for planets */
+.planet img:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease;
+}
+
+
+
+/* Hint message animation */
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+/* Media query for screens larger than 1900px */
+@media (min-width: 1900px) {
+    body {
+        font-size: 1.2em; 
+    }
+
+    #game-textbox {
+        padding: 30px; 
+       
+    }
+
+    #game-textbox  p{
+        padding: 5px; 
+        font-size: 1em;
+    }
+
+    #timer {
+        font-size: 40px; 
+    }
+
+    #solarImage {
+        width: 80%; 
+        max-height: 1200px; 
+    }
+    #left-planet-container {
+        left: 20px; 
+        margin-left: 5px;
+        
+    }
+    
+    /* Right side planets */
+    #right-planet-container {
+        right: 20px; 
+        margin-right: 5px;
+        
+        
+    }
+    .planet img {
+        width: 180px; 
+        margin-top: 30px;
+    }
+
+    .drop-zone {        
+        width: 7%;
+        height: 16%;          
+}
+
+}
+
+
+
+
+@media (max-width: 900px) {
+    .planet-container {
+        position: relative; /* Keep containers relative for flexibility */
+        display: flex; /* Flexbox for horizontal alignment */
+        flex-direction: row; /* Ensure row alignment */
+        justify-content: space-around; /* Space planets evenly */
+        align-items: center; /* Center planets vertically */
+        height: auto; /* Allow dynamic height */
+        margin-bottom: 100px; /* Reduce space between rows */
+        width: 100%; /* Ensure full width */
+    }
+
+    #left-planet-container,
+    #right-planet-container {
+        flex: 1; /* Equal space for both containers */
+        position: relative; /* Avoid absolute positioning */
+        margin: 0 5px; /* Slight horizontal margin between containers */
+    }
+
+    .planet {
+        margin: 5px; /* Reduce space between individual planets */
+    }
+
+    .planet img {
+        width: 120px;
+        margin: 10px 0; /* Add space between planets */
+    }
+    #game-textbox {
+        top: 15%; /* Position closer to the top */
+        right: 30%;
+        width: 30%;
+        font-size: 14px;
+    }
+    #solarImage {
+        width: 700px; 
+        max-height: 1000px; 
+        margin: 50px;
+    }
+    .drop-zone {        
+        width: 8.5%;
+        height: 17%;  
+           
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 0.9em; /* Slightly smaller font size for readability */
+    }
+
+    #game-textbox {
+        top: 100%; /* Adjust positioning */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%);
+        width: 90%; /* Expand width to fit screen */
+        font-size: 12px; /* Adjust font size for small screens */
+        padding: 10px; /* Reduce padding for compact layout */
+    }
+
+    #timer {
+        font-size: 15px; /* Smaller timer font */
+        margin-top: 10px;
+        color: #ff0000;
+    }
+
+    #solarImage {
+        width: 90%; /* Adjust image width */
+        max-height: 300px; /* Reduce max height for mobile */
+        margin: 20px auto;
+    }
+
+    #solar-system-container {
+        padding: 10px;
+        overflow: hidden;
+    }
+
+    .planet-container {
+        flex-direction: row; /* Align planets in rows */
+        flex-wrap: wrap; /* Allow wrapping to new rows */
+        justify-content: center; /* Center the planets */
+        align-items: center; /* Align planets vertically */
+        height: auto; /* Let height adjust dynamically */
+        margin: 10px 0; /* Reduce margin between rows */
+    }
+
+    .planet {
+        margin: 5px; /* Space between planets */
+    }
+
+    .planet img {
+        width: 70px; /* Reduce planet size for mobile */
+        height: auto;
+        margin: 5px;
+    }
+
+    .drop-zone {
+        width: 10%; /* Slightly larger for easier touch interaction */
+        height: 15%; /* Adjust height to match width proportionally */
+    }
+
+    #left-planet-container,
+    #right-planet-container {
+        width: 100%; /* Full-width on mobile */
+        margin: 0; /* Remove horizontal margins */
+    }
+}
+    
+}
+
+

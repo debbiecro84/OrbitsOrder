@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Description -->
+    <meta name="description" content="Meet Nova, your space guide! Enter your name and get ready to embark on a mission to align the planets in the correct order in the solar system.">
+    <!-- SEO Keywords -->
+    <meta name="keywords" content="space game, astronomy game for kids, educational games, Orbits Order">
+    <!-- Favicon -->
+    <link rel="icon" href="data:,">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Play&display=swap" rel="stylesheet">
+    <!-- Page Title -->
+    <title>Enter Your Name - Orbits Order Game</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/nova-greeting.css">
+</head>
+
+<body>
+    <!-- Header: Game Title -->
+    <header>
+        <h1>ORBITS ORDER</h1> <!-- Main title of the game -->
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Nova's Greeting and Speech Bubble -->
+        <section id="user-container">
+            <figure id="image-speech">
+                <!-- Nova's speech bubble -->
+                <img src="images/speech-bubble.png" id="nova-speech" alt="Speech bubble with Nova's greeting">
+                <!-- Nova character image -->
+                <img src="images/Alien_Astronaut_Nova.png" id="nova-image" alt="Nova, the alien astronaut wearing a space suit">
+                <!-- Nova's prompt to enter username -->
+                <img src="images/nameSpeech.png" id="nova-enterName" alt="Speech bubble prompting the user to enter their name">
+            </figure>
+        </section>
+
+        <!-- Countdown Timer -->
+        <div id="countdown-timer" aria-live="polite" style="display: none;">
+            <p id="countdown-message">Get Ready...</p> <!-- Countdown message for the user -->
+        </div>
+
+        <!-- Error Message -->
+        <p id="error-message" aria-live="polite" style="display: none;"></p> <!-- Hidden error message placeholder -->
+
+        <!-- Rocket Image Animation -->
+        <img id="rocket" src="images/rocketIMG.png" alt="Rocket ready to launch" 
+            style="position: absolute; left: 50%; top: 100%; transform: translateX(-50%); width: 350px; height: auto;">
+
+        <!-- Background Music (Optional, Currently Disabled) -->
+        <!-- Uncomment to enable background music -->
+        <!-- <audio id="background-music" src="audio/menuMusic.mp3" loop></audio> -->
+
+        <!-- Nova's Voice Audio -->
+        <audio id="nova-voice" src="audio/nova-voice.mp3"></audio>
+
+        <!-- Username Input Section -->
+        <div id="user-name">
+            <!-- Text input for username -->
+            <input type="text" id="username-input" placeholder="Enter name" aria-label="Enter your username">
+            <!-- Start Game Button -->
+            <button id="start-game" aria-label="Start game">Start Game</button>
+        </div>
+    </main>
+
+    <!-- Load jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI for Animations (Optional) -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- Custom JavaScript Script -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

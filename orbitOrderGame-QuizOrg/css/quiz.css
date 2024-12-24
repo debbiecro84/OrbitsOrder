@@ -1,0 +1,225 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "play", sans-serif;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background: url('../images/main-backgrd-Img.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Kirang Haerang', cursive;
+    color: #FFDD00;
+    font-size: 3em;
+
+}
+
+#quiz-container {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background: #07134b;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000;
+    border: 1px white solid;
+}
+
+#question {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+
+button.answer {
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: url('../images/rocket-mouse.png'), pointer;
+}
+
+button.answer:hover {
+    background-color: #06054f;
+    border: 1px white solid;
+    transform: scale(1.05);
+}
+
+button:hover {
+    background-color: #00CE70;
+}
+
+button.answer:focus,
+#next-question:focus,
+#end-quiz:focus,
+#replay-audio:focus                         
+ {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+
+
+
+#replay-audio {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 0.8rem;
+    background-color: #0700ce;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+#replay-audio:hover {
+    background-color: #35468b;
+}
+
+#end-quiz {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: url('../images/rocket-mouse.png'), auto;
+}
+
+#end-quiz:hover {
+    background-color: #fa0202;
+    transform: scale(1.05);
+}
+
+
+
+.question-animation {
+    animation: zoomIn 0.6s ease-in-out;
+}
+
+.question-animation {
+    animation: zoomIn 0.6s ease-in-out;
+    will-change: transform, opacity;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+@media (min-width: 1900px) {
+    body {
+        font-size: 1.7em;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+    h2{
+        font-size: 1.8em;
+    }
+
+    #quiz-container {
+        max-width: 850px;
+        padding: 30px;
+        box-shadow: 0px 0px 15px #fff;
+    }
+
+    #question {
+        font-size: 2rem;
+    }
+
+    button.answer {
+        width: 60%;
+        font-size: 1.2rem;
+        padding: 15px;
+    }
+
+    #next-question,
+    #end-quiz {
+        font-size: 1.2rem;
+        padding: 15px 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 0.9em; 
+        background: url('../images/main-backgrd-Img.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 2em; 
+        margin-top: 10px; 
+    }
+
+    #quiz-container {
+        width: 95%; 
+        max-width: 90%; 
+        padding: 15px; 
+        border-radius: 8px; 
+        box-shadow: 0px 0px 8px #000; 
+    }
+
+    #question {
+        font-size: 1.2rem; 
+        margin-bottom: 20px; 
+    }
+
+    button.answer {
+        width: 90%; 
+        font-size: 0.8rem; 
+        padding: 10px; 
+        margin: 10px auto; 
+        border-radius: 5px; 
+    }
+
+    #next-question,
+    #end-quiz {
+        font-size: 0.9rem; 
+        padding: 10px 15px; 
+        width: 80%; 
+        margin: 15px auto; 
+        border-radius: 5px;
+    }
+
+    #end-quiz:hover,
+    button.answer:hover {
+        transform: scale(1.03); 
+    }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Description for SEO -->
+    <meta name="description" content="Congratulations! You completed the Orbits Order game. Check your time and try again to beat your score.">
+    <!-- Keywords for SEO -->
+    <meta name="keywords" content="game over Orbits Order, game results, replay game">
+    <!-- Favicon -->
+    <link rel="icon" href="data:,">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Play&display=swap" rel="stylesheet">
+    <!-- Page Title -->
+    <title>Game Over - Orbits Order</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/end-page.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Orbits Order</h1> <!-- Main game title -->
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Celebration Image -->
+        <img src="images/Alien_Astronaut_Nova.png" id="nova-image" alt="Nova the Alien Astronaut celebrating your game completion">
+
+        <!-- Successful Game Completion Message -->
+        <section id="successful-msg" aria-live="polite">
+            <p>
+                Well done <span id="usernameInput-success"></span>!!!!!<br>
+                <span id="completion-details"></span><br>
+                You saved the solar system in... <span id="timeLeft"></span> seconds! <br><br>
+                Think you can beat your time? Tap 'Try Again' and give it another go!
+                <br><br> Or play the <strong>Quiz</strong> to win the <strong>Space Trophy!</strong> 
+            </p>
+        </section>
+
+        <!-- Unsuccessful Game Message -->
+        <section id="unsuccessful-msg" aria-live="polite" style="display: none;">
+            <p>
+                Better luck next time, <span id="usernameInput-unsuccessful"></span>. <br><br>
+                Don’t give up! <br><br> Tap 'Try Again' and give it another go
+                <br><br> Or play the <strong>Quiz</strong> to win the <strong>Space Trophy!</strong> 
+            </p>
+        </section>
+
+        <!-- Try Again Button -->
+        <button id="try-again-button" class="common-button" onclick="location.href='game-page.html'" aria-label="Retry the Orbits Order game">
+            Try Again
+        </button>
+
+        <!-- Take the Quiz Button -->
+        <button id="take-quiz" class="common-button" onclick="location.href='quiz.html'" aria-label="Take the Orbits Order quiz">
+            Take the Quiz
+        </button>
+
+        <!-- Background Music -->
+        <audio id="background-music" src="audio/menuMusic.mp3" loop></audio>
+    </main>
+
+    <!-- Load jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- JavaScript Logic -->
+    <script>
+        $(document).ready(function () {
+            // Retrieve variables stored in localStorage
+            const username = localStorage.getItem("usernameInput") || "Player";
+            const completionTime = parseInt(localStorage.getItem("completionTime"), 10) || 0;
+            const gameResult = localStorage.getItem("gameResult") || "unsuccessful";
+
+            // Display username in both success and failure messages
+            $("#usernameInput-success").text(username);
+            $("#usernameInput-unsuccessful").text(username);
+
+            // Format completion time (minutes:seconds)
+            const minutes = Math.floor(completionTime / 60);
+            const seconds = completionTime % 60;
+            const formattedTime = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            $("#timeLeft").text(formattedTime);
+
+            // Show appropriate message based on game result
+            if (gameResult === "successful") {
+                $("#successful-msg").show(); // Show success message
+                $("#unsuccessful-msg").hide(); // Hide failure message
+            } else {
+                $("#successful-msg").hide(); // Hide success message
+                $("#unsuccessful-msg").show(); // Show failure message
+            }
+        });
+
+        // Background Music Logic
+        document.addEventListener("DOMContentLoaded", () => {
+            const music = document.getElementById("background-music");
+            if (music) {
+                // Retrieve music setting from localStorage
+                const musicPlaying = localStorage.getItem("musicPlaying") || "false";
+                if (musicPlaying === "true") {
+                    music.volume = 0.5; // Set volume level
+                    music.play().catch((error) => console.error("Music playback failed:", error));
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

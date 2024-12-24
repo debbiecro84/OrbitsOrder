@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="***************** ">
+    <meta name="keywords" content="*****************">
+    <link rel="icon" href="data:,">
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Play&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/facts.-page.css">
+    <title>Solar System Fun Facts</title>
+
+</head>
+
+<body>
+    <h1>Orbits Order</h1>
+    <h2 id="hide-h2">Solar System Fun Facts</h2>
+
+    <div class="facts-container" id="facts-container">
+        <div class="fact-card" id="fact-jupiter"
+            onclick="showFact('Jupiter', 'Jupiter is the biggest planet and has HUGE storms, including one called the Great Red Spot that\'s bigger than Earth!', 'images/jupiter.jpg', this)">
+            <h2>Jupiter</h2>
+            <audio id="audio-jupiter" src="audio/jupiter-voice.mp3"></audio>
+            <img src="images/jupiter.jpg" alt="jupiter" class="fact-image" style="display: none;">
+        </div>
+        <div class="fact-card" id="fact-neptune"
+            onclick="showFact('Neptune', 'Neptune is very windy—it has the strongest winds in the solar system!', 'images/neptune.jpg', this)">
+            <h2>Neptune</h2>
+            <audio id="audio-neptune" src="audio/neptune-voice.mp3"></audio>
+            <img src="images/neptune.jpg" alt="neptune" class="fact-image" style="display: none;">
+        </div>
+        <div class="fact-card" id="fact-pluto"
+            onclick="showFact('Pluto', 'Pluto was once called the ninth planet, but now it’s not a planet anymore.', 'images/pluto.jpg', this)">
+            <h2>Pluto</h2>
+            <audio id="audio-pluto" src="audio/pluto-voice.mp3"></audio>
+            <img src="images/pluto.jpg" alt="pluto" class="fact-image" style="display: none;">
+        </div>
+        <div class="fact-card" id="fact-saturn"
+            onclick="showFact('Saturn', 'Saturn wears a beautiful belt of sparkly rings made of ice and rock!', 'images/saturn.jpg', this)">
+            <h2>Saturn</h2>
+            <audio id="audio-saturn" src="audio/saturn-voice.mp3"></audio>
+            <img src="images/saturn.jpg" alt="saturn" class="fact-image" style="display: none;">
+        </div>
+    </div>
+
+
+    </div>
+
+    <div id="fact-display" style="display: none; text-align: center; padding: 20px;">
+        <h2 id="fact-title"></h2>
+        <p id="fact-text"></p>
+        <button id="goBack" onclick="goBack()">Back</button>
+    </div>
+
+    <!-- Back to game button -->
+    <button id="back-to-game-btn" onclick="goToGame()">Back to Game</button>
+
+
+
+    <script src="js/facts.js"></script>
+</body>
+
+</html>

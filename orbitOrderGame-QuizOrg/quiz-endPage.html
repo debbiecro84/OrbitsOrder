@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="View your quiz results in Orbits Order! Check your score, earn the Space Trophy, and try again to improve your knowledge of the solar system.">
+    <meta name="keywords" content="game over Orbits Order, game results, replay game">
+
+    <!-- Favicon for the page -->
+    <link rel="icon" href="data:,">
+
+    <!-- Google Fonts for styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Play&display=swap" rel="stylesheet">
+
+    <!-- Page Title -->
+    <title>Quiz Results - Orbits Order</title>
+
+    <!-- External CSS for styling -->
+    <link rel="stylesheet" href="css/quiz-end.css">
+</head>
+
+<body>
+    <!-- Header Section: Title of the Game -->
+    <header>
+        <h1>Orbits Order</h1> <!-- Main Game Title -->
+        <h2>Quiz Results!</h2> <!-- Subheading for Results -->
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Results Container -->
+        <section id="results-container">
+            <!-- Nova Image (Character Congratulating User) -->
+            <img src="images/Alien_Astronaut_Nova.png" alt="Nova congratulating you" id="nova-image">
+
+            <!-- Message Displayed to the User -->
+            <h2 id="nova-message"></h2>
+
+            <!-- User's Score Display -->
+            <p id="score-message"></p>
+
+            <!-- Space Trophy Image (Hidden by Default) -->
+            <img src="images/spaceTrophy.png" alt="Space Trophy" id="space-trophy" class="hidden">
+
+            <!-- Play Quiz Again Button -->
+            <button id="play-quiz-again" onclick="location.href='quiz.html'" aria-label="Play the quiz again">
+                Play Quiz Again
+            </button>
+
+            <!-- Return Home Button -->
+            <button id="return-home" onclick="location.href='index.html'" aria-label="Return to the home page">
+                Return to Home
+            </button>
+        </section>
+    </main>
+
+    <!-- Background Music -->
+    <audio id="background-music" src="audio/menuMusic.mp3" loop></audio>
+
+    <!-- External JavaScript File for Logic -->
+    <script src="js/quiz-end.js"></script>
+</body>
+
+</html>

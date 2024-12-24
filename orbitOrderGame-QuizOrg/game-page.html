@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="description" content="Play Orbits Order! Drag and drop planets into their correct positions in the solar system. Learn and have fun while racing against time!">
+    <meta name="keywords" content="play Orbits Order, educational game, solar system game for kids, interactive space game">
+    <link rel="icon" href="data:,">
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Play&display=swap" rel="stylesheet">
+    <title>Play Orbits Order - Solar System Game</title>
+    <link rel="stylesheet" href="css/game-page.css">
+</head>
+
+<body>
+    <!-- Game Area -->
+    <main id="game-page">
+        <header id="game-textbox">
+            <p>Drag the planets into the squares to align them in the correct order from the Sun.</p>
+            <div id="timer">Time: 3:00</div>
+        </header>
+
+        <!-- Solar System Background -->
+        <section id="solar-system-container" aria-label="Solar system background with drag-and-drop zones">
+            <img src="images/solar-system-PS.png" id="solarImage" alt="Solar system background showing the Sun and orbits">
+
+
+            <!-- Drop zones for planets -->
+            <div id="orbit">
+                <div class="drop-zone" data-planet="mercury" style="top: 50%; left: 32.9%;"></div>
+                <div class="drop-zone" data-planet="venus" style="top: 50%; left: 40.5%;"></div>
+                <div class="drop-zone" data-planet="earth" style="top: 50%; left: 48%;"></div>
+                <div class="drop-zone" data-planet="mars" style="top: 50%; left: 55.4%;"></div>
+                <div class="drop-zone" data-planet="jupiter" style="top: 50%; left: 62.8%;"></div>
+                <div class="drop-zone" data-planet="saturn" style="top: 50%; left: 70.4%;"></div>
+                <div class="drop-zone" data-planet="uranus" style="top: 50%; left: 77.9%;"></div>
+                <div class="drop-zone" data-planet="neptune" style="top: 50%; left: 85.4%;"></div>
+            </div>
+            
+    </section>
+    <!-- Hint message -->
+    <div     id="hint-message" style="display: none; position: absolute; top: 20px; left: 50%; transform: translateX(-50%); background-color: #87CEEB; color: white; padding: 10px; border-radius: 8px; font-size: 16px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);">
+            Hint: A blue planet goes here!
+    </div>
+
+
+    <!-- Audio for correct and wrong answers -->
+    <audio id="correct-sound" src="audio/correctAnswer.wav"></audio>
+    <audio id="wrong-sound" src="audio/wrongAnswer.wav"></audio>
+
+  <!-- Left Side Planets -->
+<section id="left-planet-container" class="planet-container">
+    <div class="planet" id="uranus" draggable="true" role="button" aria-label="Drag Uranus">
+        <img src="images/planetImages/uranus.png" alt="Image of the planet Uranus">
+    </div>
+    <div class="planet" id="mars" draggable="true" role="button" aria-label="Drag Mars">
+        <img src="images/planetImages/mars.png" alt="Image of the planet Mars">
+    </div>
+    <div class="planet" id="jupiter" draggable="true" role="button" aria-label="Drag Jupiter">
+        <img src="images/planetImages/jupiter.png" alt="Image of the planet Jupiter">
+    </div>
+    <div class="planet" id="mercury" draggable="true" role="button" aria-label="Drag Mercury">
+        <img src="images/planetImages/mercury.png" alt="Image of the planet Mercury">
+    </div>
+</section>
+
+<!-- Right Side Planets -->
+<section id="right-planet-container" class="planet-container">
+    <div class="planet" id="saturn" draggable="true" role="button" aria-label="Drag Saturn">
+        <img src="images/planetImages/saturn.png" alt="Image of the planet Saturn">
+    </div>
+    <div class="planet" id="earth" draggable="true" role="button" aria-label="Drag Earth">
+        <img src="images/planetImages/earth.png" alt="Image of the planet Earth">
+    </div>
+    <div class="planet" id="neptune" draggable="true" role="button" aria-label="Drag Neptune">
+        <img src="images/planetImages/neptune.png" alt="Image of the planet Neptune">
+    </div>
+    <div class="planet" id="venus" draggable="true" role="button" aria-label="Drag Venus">
+        <img src="images/planetImages/venus.png" alt="Image of the planet Venus">
+    </div>
+</section>
+
+</main>
+
+<!-- Custom JavaScript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+
+</html>

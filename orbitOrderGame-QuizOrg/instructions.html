@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <!-- SEO Description -->
+    <meta name="description" content="Learn how to play Orbits Order. Drag and drop planets into their correct positions in the solar system within 3 minutes. Fun and educational for kids!">
+    <!-- SEO Keywords -->
+    <meta name="keywords" content="how to play Orbits Order, instructions for solar system game, educational game instructions">
+    <!-- Favicon -->
+    <link rel="icon" href="data:,">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Play&display=swap" rel="stylesheet">
+    <!-- Page Title -->
+    <title>How to Play - Orbits Order</title>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="css/instructions-page.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>ORBITS ORDER</h1> <!-- Main game title -->
+    </header>
+
+    <!-- Main Instructions Content -->
+    <main>
+        <!-- Instructions Section -->
+        <section class="instructions-box">
+            <h2>Game Instructions</h2>
+            <p>
+                Welcome, Future Astronomer! Your mission is to arrange the planets in the correct
+                order from the Sun. Drag each planet into the correct white square in
+                under<br> <strong><span class="highlight">3 Minutes !!!</span></strong>.<br><br>
+                <strong>Click on</strong> the picture below to help you get ready for your space adventure!
+            </p>
+
+            <!-- Instruction Image and Audio -->
+            <figure>
+                <!-- Clickable Image for Playing Audio -->
+                <img src="images/correctOrder.png" 
+                    alt="A labeled diagram showing the correct order of planets in the solar system" 
+                    id="correctImg"
+                    class="clickable-image"
+                    onclick="playInstructionsVoice()">
+                <figcaption>Correct order of planets from the Sun</figcaption> <!-- Image Caption -->
+            </figure>
+
+            <!-- Audio Element for Instructions -->
+            <audio id="instructions-voice" src="audio/instr-voice.mp3"></audio>
+        </section>
+
+        <!-- Continue Button -->
+        <section>
+            <button id="continue-button1" alt="Continue to the main game" onclick="location.href='greetings-page.html'">
+                Continue
+            </button>
+        </section>
+    </main>
+
+    <!-- Load jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Load jQuery UI (Optional for Animations) -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+
+    <!-- Your custom script -->
+    <script src="js/script.js"></script>
+
+   
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Description for SEO -->
+    <meta name="description" content="Test your knowledge of the solar system with this fun and educational quiz in Orbits Order. Answer questions and learn more about space!">
+    <!-- Keywords for SEO -->
+    <meta name="keywords" content="solar system quiz, Orbits Order quiz, space quiz, astronomy quiz for kids, fun educational games">
+    <!-- Favicon -->
+    <link rel="icon" href="data:,">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Play&display=swap" rel="stylesheet">
+    <!-- Page Title -->
+    <title>Quiz - Orbits Order</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+
+<body>
+    <!-- Header Section: Title of the Game and Quiz -->
+    <header>
+        <h1>Orbits Order</h1> <!-- Main Game Title -->
+        <h2>Quiz Time!</h2> <!-- Subheading for the Quiz Page -->
+    </header>
+
+    <!-- Main Quiz Section -->
+    <main>
+        <section id="quiz-container">
+            <!-- Question Text -->
+            <p id="question"></p> <!-- Displays the current question dynamically -->
+
+            <!-- Answer Buttons -->
+            <div id="answers"></div> <!-- Container for dynamically generated answer buttons -->
+
+            <!-- Feedback for Correct/Wrong Answers -->
+            <p id="feedback" class="hidden"></p> <!-- Hidden by default, shows feedback when user answers -->
+
+            <!-- Next Question Button (hidden initially) -->
+            <button id="next-question" class="hidden" style="display: none;">
+                Next Question
+            </button>
+
+            <!-- Replay Audio Button -->
+            <button id="replay-audio" onclick="replayQuestionAudio()">🔊 Replay Question Audio</button>
+        </section>
+
+        <!-- Correct and Wrong Answer Sound Effects -->
+        <audio id="correct-sound" src="audio/correctAnswer.wav"></audio> <!-- Sound for correct answer -->
+        <audio id="wrong-sound" src="audio/wrongAnswer.wav"></audio> <!-- Sound for incorrect answer -->
+    </main>
+
+    <!-- Footer Section: End Quiz Button -->
+    <footer>
+        <button id="end-quiz" onclick="location.href='index.html'">
+            End Quiz
+        </button> <!-- Takes the user back to the home page -->
+    </footer>
+
+    <!-- External JavaScript for Quiz Logic -->
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>

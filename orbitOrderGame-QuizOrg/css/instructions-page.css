@@ -1,0 +1,187 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Play', sans-serif;
+    background-color: #00000a;
+    color: white;
+    text-align: center;
+    background: url('../images/main-backgrd-Img.jpg') no-repeat center center fixed;
+    background-size: cover;
+   
+    
+}
+
+h1 {
+    font-family: 'Kirang Haerang', cursive;
+    font-size: clamp(2.5em, 5vw, 4em);
+    color: #FFDD00;
+    margin: 0 auto; /* Ensure it's centered horizontally */
+    text-shadow: 3px 3px 5px rgba(235, 104, 48, 0.5), 0px 0px 10px #ffdf00;
+}
+
+h2 {
+    font-size: clamp(1.8em, 3vw, 2.2em);
+    color: #f7f0ee;
+    margin: 10px 0 20px;
+}
+
+.instructions-box {
+    background-color: #0E1441;
+    border: 2px solid #f8f7f7;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 850px;
+    width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    color: #f6f2f2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.instructions-box img {
+    width: 80%; 
+    max-width: 700px; 
+    height: auto; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 10px rgba(11, 11, 11, 0.3);
+    margin-top: 20px; 
+}
+
+/* Default image styling */
+.clickable-image {
+    width: 300px; /* Default size */
+    transition: transform 0.3s ease-in-out; 
+    cursor: pointer;
+}
+
+/* Enlarged state */
+.clickable-image.enlarged {
+    transform: scale(1.6); 
+}
+
+
+.instructions-box p {
+    font-size: 1.5em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.instructions-box strong {
+    color: #ff5722;
+}
+
+.instructions-box .highlight {
+    color: #fb3c02;
+    font-weight: bold;
+}
+
+#continue-button1 {
+    padding: 10px 20px;
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    cursor: url('../images/rocket-mouse.png'), auto;
+}
+
+#continue-button1:hover {
+    background-color: #00CE70;
+    transform: scale(1.1);
+}
+
+.clickable-image:focus {
+    outline: 2px solid #FF9800;
+    transform: scale(1.1);
+}
+
+#continue-button1:focus {
+    outline: 2px solid #FF9800;
+    outline-offset: 4px;
+    transform: scale(1.1);
+}
+
+@media (min-width: 1900px) {
+    
+
+    h1 {
+        font-size: clamp(3.5em, 6vw, 5em); 
+        text-shadow: 5px 5px 8px rgba(235, 104, 48, 0.6), 0px 0px 15px #ffdf00; 
+    }
+
+    h2 {
+        font-size: clamp(2.5em, 4vw, 3em); 
+        margin: 20px 0 30px; 
+    }
+
+    .instructions-box {
+        max-width: 1200px; 
+        width: 90%; 
+        padding: 40px; 
+        font-size: 1em; 
+        
+    }
+
+    .instructions-box img {
+        width: 90%; 
+        max-width: 900px; 
+        box-shadow: 0 6px 12px rgba(11, 11, 11, 0.4); 
+        margin-top: 30px; 
+    }
+
+    .instructions-box p {
+        font-size: 1.3em; 
+        line-height: 1.8; 
+        margin-bottom: 30px; 
+    }
+
+    #continue-button1 {
+        padding: 15px 30px; 
+        font-size: 18px; 
+        border-radius: 8px; 
+    }
+
+    #continue-button1:hover {
+        transform: scale(1.2); 
+    }
+
+    .clickable-image {
+        width: 400px; 
+    }
+
+    .clickable-image:focus {
+        transform: scale(1.8); 
+    }
+}
+
+
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5em; 
+    }
+
+    .instructions-box {
+        width: 95%; 
+        padding: 15px; 
+
+    #continue-button1 {
+        font-size: 14px; 
+        padding: 8px 16px; 
+    }
+
+    .instructions-box img {
+        width: 90%; 
+    }
+}
+
+}
+
+
